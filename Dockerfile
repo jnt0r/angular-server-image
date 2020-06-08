@@ -2,7 +2,7 @@
 FROM node:12.18.0-alpine as build
 WORKDIR /app
 COPY package.json /app
-RUN npm install --only=prod
+RUN npm install
 COPY . /app
 RUN npm run build --prod
 RUN mv /app/dist/* /app/built
