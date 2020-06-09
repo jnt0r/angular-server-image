@@ -20,3 +20,7 @@ To automatically get the newest version on build, you can use this command to bu
 ```curl https://raw.githubusercontent.com/jnt0r/angular-server-image/master/Dockerfile | docker build -f - . -t YOUR_IMAGE_NAME```
 
 You then don't need to copy the Dockerfile to your project. The dockerignore file is still usefull then. This command uses the stdin functionality of docker ([docker documentation](https://docs.docker.com/engine/reference/commandline/build/#build-with--)).
+
+## Coming soon / Planned functionality
+
+- Https/ssl (using certbot and let's encrypt)
