@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json /app
 RUN npm install
 COPY . /app
-RUN ng build --prod
+RUN npm run build:prod
 RUN mv /app/dist/* /app/built
 
 # Serve app
