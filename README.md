@@ -1,6 +1,8 @@
 # Angular-Server docker image
 Dockerfile to build angular project and serve using nginx.
 
+## Usage
+
 Copy the Dockerfile and past it inside the root of your angular project. Then you can build the image using 
 
 ```docker build . -t YOUR_IMAGE_NAME```
