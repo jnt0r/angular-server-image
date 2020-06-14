@@ -3,7 +3,7 @@ Dockerfile to build angular project and serve using nginx.
 
 ## Usage
 
-Copy the Dockerfile and past it inside the root of your angular project. Then you can build the image using 
+Copy the Dockerfile you want to use and past it inside the root of your angular project. Then you can build the image using 
 
 ```docker build . --rm -t YOUR_IMAGE_NAME```
 
@@ -12,6 +12,10 @@ To run your container, run
 ```docker run -d --rm -p 80:80 -p 443:443 --name YOUR_CONTAINER_NAME YOUR_IMAGE_NAME```
 
 To speed up image creation and minimize container size add an `.dockerignore` file. You can copy the example one inside this repository ([file](https://github.com/jnt0r/angular-server-image/blob/master/.dockerignore)).
+
+# Dockerfile options
+
+There are two Dockerfiles in this repository. The `Dockerfile` creates nginx server without ssl enabled. The `Dockerfile.localhost` creates a DEVELOPMENT server with an ssl certificate for localhost. To use this Dockerfile with the certificate you also need the `localhost-ssl.conf` inside the root of your project.
 
 ## Other installation options
 
